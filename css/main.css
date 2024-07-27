@@ -178,5 +178,61 @@ section {
     background: #fff;
     color: #000;
     text-transform: uppercase;
+    margin-top: 30px;
 }
 
+/* con1 */
+.con1 .box {
+    padding: 60px;
+    background-color: rgba(55, 55, 55, .4);
+    backdrop-filter: blur(100px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 90px;
+}
+.con1 .box .mainText {
+    font-size: 30px;
+    grid-row-start: 2;
+}
+.con1 .box .subText {
+    max-width: 500px;
+    font-size: 20px;
+    grid-column-start: 2;
+}
+.con1 .box .subText p {
+    margin-top: 14px;
+}
+.con1 .textAni {
+    margin-top: 14px;
+    position: relative;
+}
+.con1 .textAni::before {
+    content: '';
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background: #e36840;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: opa linear 1.5s 0s infinite;
+}
+@keyframes opa {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.con1 .textAni ul {
+    display: grid;
+    max-width: 800px;
+}
+.con1 .textAni ul li {
+    font-size: 65px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    transform: translateX(30px);
+    opacity: 0;
+}
