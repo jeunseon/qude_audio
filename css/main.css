@@ -110,3 +110,73 @@ header .gnb .menuBox.on li:nth-child(3) a {
 header .gnb .menuBox.on li:nth-child(4) a {
     transition-delay: .15s;
 }
+
+/* visual 영역 */
+.visual {
+    margin-bottom: 0;
+}
+.visual .inner {
+    display: grid;
+    height: 100vh;
+    padding: 25px 50px 25px;
+    box-sizing: border-box;
+    grid-template-rows: auto 1fr auto;
+}
+.visual .inner .mainText {
+    max-width: fit-content;
+    font-weight: normal;
+    font-size: 80px;
+    margin-left: auto;
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+.visual .inner .mainText span {
+    display: block;
+    overflow: hidden;
+}
+.visual .inner .mainText span i {
+    display: block;
+}
+.visual .inner .subText {
+    font-weight: normal;
+    font-size: 20px;
+    align-self: flex-end;
+    margin-bottom: 50px;
+}
+.visual .inner .subText span {
+    color: #585858;
+}
+.visual .inner .logoWrap {
+    display: flex;
+    justify-content: space-between;
+}
+.visual .inner .logoWrap span {
+    width: 16%;
+}
+.visual .inner .logoWrap span img {
+    width: 100%;
+}
+
+/* section 공통요소로 스타일 적용 */
+section {
+    margin-bottom: 150px;
+}
+.inner {
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+.box {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.btn {
+    font-size: 11px;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+}
+
