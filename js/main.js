@@ -33,5 +33,22 @@ window.onload = function(){
     .to('.logoWrap #n', {x:100, y:100, rotate:-10, ease:'none', duration:5,}, 0)
     .to('.logoWrap #g', {x:50, y:450, rotate:20, ease:'none', duration:5,}, 0)
 
+    // 02. 공통적 .mainTextBox .title i animation
+    gsap.utils.toArray('.mainTextBox .title i').forEach((selector) => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: selector,
+                start: '100% 100%',
+                end: '100% 100%',
+                scrub: 1,
+                // markers: true
+            }
+        })
+    
+    .fromTo(selector, {overflow:'hidden', y:150}, {y:0, ease:'none', duration:5}, 0)
+    });
+
+    
+
     
 }
