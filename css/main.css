@@ -457,3 +457,45 @@ section {
 .con4 .subTextBox .subText p:nth-child(1) {
     margin-bottom: 20px;
 }
+
+/* con5 */
+.con5 {
+    background: #fff;
+    color: #141412;
+    margin-bottom: 0;
+}
+.con5 .inner {
+    padding: 50px;
+}
+.con5 .mainTextBox h2 {
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    font-weight: normal;
+}
+.con5 .listBox {
+    border-top: 1px solid #000;
+    margin-top: 150px;
+}
+.con5 .listBox li {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.con5 .listBox li h3 {
+    font-size: 40px;
+    letter-spacing: -1px;
+    font-weight: normal;
+}
+.con5 .listBox li p {
+    align-self: center;
+    /* 글 가운데 정렬 */
+}
+.con5 .imgBox {
+    position: absolute;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 100;
+}
