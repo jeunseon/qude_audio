@@ -72,5 +72,18 @@ window.onload = function(){
     }
     textAni.play();
 
+    // 05. con4 listBox의 스크롤트리거 애니메이션
+    gsap.utils.toArray('.con4 .listBox .box').forEach((selector) => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: selector,
+                start: '0% 20%',
+                end: '0% 0%',
+                scrub: 1,
+                markers: true
+            }
+        })
+        .to(selector, {transform: 'rotateX(-10deg) scale(0.9)', transformOrigin: 'top', filter: 'brightness(0.3)'}, 0)
+    });
 
 }
