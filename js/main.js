@@ -56,11 +56,21 @@ window.onload = function(){
                 end: '100% 100%',
                 // 시작하자마자 끝난다.
                 scrub: 1,
-                markers: true
+                // markers: true
             }
         })
         .fromTo(selector, {opacity:0, y:100}, {opacity:1, y:0, ease:'none', duration:5}, 0)
     });
 
-    
+    // 04. con1 textAni 텍스트체인지 gsap 애니메이션. for반복문
+    let textAniList = document.querySelectorAll('.con1 .textAni li');
+    let textAni = gsap.timeline({repeat: -1}); // repeat 으로 무한 반복
+
+    for(let i = 0; i < textAniList.length; i++){
+        textAni.to(textAniList[i], 0.8, {opacity:1, repeat:1, delay:0, x:0, yoyo:true, ease:'power4.out'})
+        // yoyo:true로 왔다 갔다 움직인다.
+    }
+    textAni.play();
+
+
 }
