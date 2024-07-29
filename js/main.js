@@ -44,11 +44,23 @@ window.onload = function(){
                 // markers: true
             }
         })
-    
-    .fromTo(selector, {overflow:'hidden', y:150}, {y:0, ease:'none', duration:5}, 0)
+        .fromTo(selector, {overflow:'hidden', y:150}, {y:0, ease:'none', duration:5}, 0)
     });
 
-    
+    // 03. 공통적 .subText p animation
+    gsap.utils.toArray('.subText p').forEach((selector) => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: selector,
+                start: '100% 100%',
+                end: '100% 100%',
+                // 시작하자마자 끝난다.
+                scrub: 1,
+                markers: true
+            }
+        })
+        .fromTo(selector, {opacity:0, y:100}, {opacity:1, y:0, ease:'none', duration:5}, 0)
+    });
 
     
 }
