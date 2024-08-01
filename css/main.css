@@ -507,6 +507,7 @@ section {
     overflow: hidden;
 }
 .footer .inner {
+    position: relative;
     height: 100vh;
     padding: 75px 75px 25px;
     box-sizing: border-box;

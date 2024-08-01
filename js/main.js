@@ -23,6 +23,7 @@ window.onload = function(){
             scrub: 1,
             // scrub은 ScrollTrigger의 이벤트가 스크롤이 사용될때만 재생되도록 만들어주는 속성 (안적으면 트리거시점 나오면 스크롤안해도 계속 애니 진행됨)
             // scrub은 true 나 숫자로 값을 써줄수 있는데 true 같은 경우는 스크롤하면 애니 바로 멈추고 숫자는 그 시점을 따라잡는데 N초가 걸려서 애니가 더 부드러움
+
             // markers: true
         }
     })
@@ -31,7 +32,7 @@ window.onload = function(){
     .to('.logoWrap #o', {x:0, y:400, rotate:-10, ease:'none', duration:5,}, 0)
     .to('.logoWrap #u', {x:50, y:300, rotate:10, ease:'none', duration:5,}, 0)
     .to('.logoWrap #n', {x:100, y:100, rotate:-10, ease:'none', duration:5,}, 0)
-    .to('.logoWrap #g', {x:50, y:450, rotate:20, ease:'none', duration:5,}, 0)
+    .to('.logoWrap #g', {x:50, y:450, rotate:20, ease:'none', duration:5,}, 0)   
 
     // 02. 공통적 .mainTextBox .title i animation
     gsap.utils.toArray('.mainTextBox .title i').forEach((selector) => {
@@ -140,4 +141,16 @@ window.onload = function(){
             toggleClass: {targers: '.wrap', className: 'on'}
         }
     })
+
+    // 08. footer 영역
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: 'footer',
+            start: '0% 100%',
+            end: '100% 0%',
+            scrub: 1,
+            markers: true
+        }
+    })
+    .to('.logoWrap', {top: '20%', ease: 'none', duration: 5}, 0)
 }
