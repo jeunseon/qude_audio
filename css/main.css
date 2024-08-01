@@ -498,6 +498,8 @@ section {
     opacity: 0;
     z-index: 100;
 }
+.wrap.on {overflow: hidden;}
+/* pageY로 인한 스크롤을 없애기 위해서 */
 
 /* footer 영역 */
 .footer {

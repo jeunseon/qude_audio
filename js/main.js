@@ -131,4 +131,13 @@ window.onload = function(){
             gsap.to(imgBox, {scale: 0, opacity: 0, duration: .3})
         })
     }
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: '.con5',
+            start: '0% 100%',
+            end: '100% 0%',
+            toggleClass: {targers: '.wrap', className: 'on'}
+        }
+    })
 }
