@@ -86,4 +86,27 @@ window.onload = function(){
         .to(selector, {transform: 'rotateX(-10deg) scale(0.9)', transformOrigin: 'top', filter: 'brightness(0.3)'}, 0)
     });
 
+    // 06. con3 listBox 카드 애니메이션
+    gsap.utils.toArray('.con3 .listBox li').forEach((selector, t) => {
+        ScrollTrigger.create({
+        // ScrollTirgger.create() 를 이용해서 독립형으로 사용가능, 콜백함수로  무엇이든 콜백을 사용가능.
+            trigger: selector,
+            start: '30% 50%',
+            onEnter: () => {
+            //스크롤위치가 '시작'을 지나 앞으로 이동할 때(시작지점을 지나 스크롤을 아랫방향으로 내릴 때 진행되고 위쪽으로 올릴 땐 진행되지 않음
+                gsap.set(selector, {
+                    rotationX: '-65deg',
+                    z: '-500px',
+                    opacity: 0
+                }),
+                gsap.to(selector, {
+                    rotationX: 0,
+                    z: 0,
+                    opacity: 1,
+                    delay: t % 3 * .05 // % 나머지값
+                })
+            },
+            // markers: true
+        })
+    });
 }
